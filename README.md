@@ -17,5 +17,5 @@ Here are some ideas to get you started:
 ### :muscle: github stats
 
 
-<a href="https://github.com/Tbot223"><img align="left" style="width :400px" src="https://github-readme-stats.vercel.app/api?username=JWdori&bg_color==30,FF7F50,FF69B4&title_color=fff&text_color=fff&include_all_commits=true&show_icons=true&theme=gradient&hide=issues&hide_border=true&count_private=true&line_height=30&border_radius=15" alt="SeungAh's github stats"/></a>
-<a href="https://github.com/Tbot223"><img align="left" style="width :400px" src="https://github-readme-stats.vercel.app/api/top-langs/?username=JWdori&layout=compact&bg_color=30,FF7F50,FF69B4&title_color=fff&hide=cs&text_color=fff&hide_border=true&card_width=400px&border_radius=12"/></a>
+<a href="https://github.com/Tbot223"><img align="left" style="width :400px" src="https://github-readme-stats.vercel.app/api?username=Tbot223&bg_color==30,FF7F50,FF69B4&title_color=fff&text_color=fff&include_all_commits=true&show_icons=true&theme=gradient&hide=issues&hide_border=true&count_private=true&line_height=30&border_radius=15" alt="SeungAh's github stats"/></a>
+<a href="https://github.com/Tbot223"><img align="left" style="width :400px" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Tbot223&layout=compact&bg_color=30,FF7F50,FF69B4&title_color=fff&hide=cs&text_color=fff&hide_border=true&card_width=400px&border_radius=12"/></a>
