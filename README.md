@@ -174,6 +174,7 @@ results = app.thread_pool_executor(tasks, workers=4)
 아이디어를 테스트하고 혼돈과 창의력이 공존하는 개인의 모래상자. 🧪
 
 여기 있는 것들:
+##### PYTHON
 - **CountWord** — 단어를 세는 작은 유틸리티 (코딩 연습에서 시작, 이제 실제로 유용함)
 - **legacy/Core** — tbot223-core의 이전 버전들 (학습 역사)
 - **legacy/Cooooode** — 랜덤 실험: 숫자야구, 타이핑 효과, 기타 등등
