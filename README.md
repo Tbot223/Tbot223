@@ -1,220 +1,122 @@
-### Hi there! 👋
+<!-- markdownlint-disable MD033 MD041 -->
+# Hi, I'm Tbot223 👋
 
-I'm a high school student (11th grade in Korea) aspiring to be a developer. I mainly work with Python.
-
-I love building things, experimenting with ideas, and learning from mistakes. Still on the journey! 🚀
-
-📫 **Contact:**
-- Email: tbotxyz@gmail.com
-- Instagram: [@_hxun.s](https://instagram.com/_hxun.s) (faster response here!)
-
-🔭 **Interests:** AI, System Design, Clean Architecture
-
----
-
-### 🚀 Main Projects
-
-#### [tbot223-core](https://github.com/Tbot223/Core)
-A comprehensive utility package for Python applications.
-
-Why I built it:
-- Tired of writing the same boilerplate code in every module
-- Wanted to build something properly, once and for all
-
-What it supports (evolved along the way):
-- ✅ Thread-safe global state management
-- ✅ Parallel task execution made simple
-- ✅ Production-ready file operations
-- ✅ Detailed exception tracking
-
-Key features:
-- **AppCore** — Parallel execution (Thread/Process Pool), console management, multi-language support, CLI input validation
-- **FileManager** — Atomic file writing, JSON read/write, safe file management
-- **LogSys** — Structured logging system
-- **Utils** — Path conversion, encryption, PBKDF2, and includes:
-  - `GlobalVars` — Thread-safe global variables + Shared memory IPC
-  - `DecoratorUtils` — Runtime measurement, function-to-decorator converter
-- **Result** — Standardized return object for all operations
-- **ExceptionTracker** — Detailed exception tracking with system info
-
-```bash
-pip install tbot223-core
-```
-
-<details>
-<summary>📝 Quick Example</summary>
-
-```python
-from tbot223_core import AppCore, FileManager
-
-# Initialize
-app = AppCore.AppCore(is_logging_enabled=True)
-fm = FileManager.FileManager()
-
-# Safe JSON write
-fm.write_json("config.json", {"key": "value"})
-
-# Parallel execution
-tasks = [(my_func, {"arg": i}) for i in range(10)]
-results = app.thread_pool_executor(tasks, workers=4)
-```
-
-</details>
-
----
-
-#### [playground](https://github.com/Tbot223/playground)
-My personal sandbox for chaos and creativity. Testing ideas before they become real projects. 🧪
-
-What lives here:
-- **CountWord** — A tiny utility that counts words (started as a coding exercise, now genuinely useful)
-- **legacy/Core** — Previous iterations of tbot223-core (learning history)
-- **legacy/Cooooode** — Random experiments: number baseball game, typewriter effects, you name it
-
-<details>
-<summary>📝 CountWord Example</summary>
-
-```python
-from Scripts.CountWord import CountWord
-
-cw = CountWord(is_logging_enabled=False)
-result = cw.count_words_in_file("example.txt")
-print(f"Word count: {result.data}")
-```
-
-</details>
-
----
-
-### 🎯 About Me
-
-| | |
-|---|---|
-| 🎵 **Currently listening** | 어제보다 슬픈 오늘 - 우디 (Woody) |
-| 🛠️ **Dev environment** | VSCode + Windows (I prefer what most people use!) |
-| ⏰ **Coding hours** | Mostly late night 🌙 |
-| 📚 **How I learn** | Self-taught + reading others' code |
-| 🎯 **What I value** | Stability, Performance, Compatibility |
-| 🍿 **Coding essentials** | Snacks, Music, and Curiosity (can't code without these!) |
-| 😴 **School life** | I sleep all the time, I like sleep more than studying~ (oops) |
-
-> 💬 Issues and PRs are always welcome!
-
----
-
-<details>
-<summary>🇰🇷 한국어</summary>
-
-### 안녕하세요! 👋
-
-고등학교 2학년 개발자 지망생입니다. Python을 주력으로 사용합니다.
-
-저는 뭔가를 만들고, 아이디어를 실험하고, 실수에서 배우는 걸 좋아합니다. 아직도 배우는 중! 🚀
-
-📫 **연락처:**
-- 이메일: tbotxyz@gmail.com
-- 인스타그램: [@_hxun.s](https://instagram.com/_hxun.s) (이메일보다 인스타를 잘 봐요!)
-
-🔭 **관심 기술:** AI, 시스템 설계, 클린 아키텍처
-
----
-
-### 🚀 주요 프로젝트
-
-#### [tbot223-core](https://github.com/Tbot223/Core)
-Python 애플리케이션을 위한 종합 유틸리티 패키지입니다.
-
-만든 이유:
-- 반복되는 코드를 모듈마다 만들기 귀찮았음
-- 만들 거면 제대로 만들고 싶었음
-
-지원하는 기능 (만들다 보니 됨):
-- ✅ 스레드 안전 전역 상태 관리
-- ✅ 병렬 작업 실행 간단하게
-- ✅ 프로덕션 레벨의 파일 작업
-- ✅ 상세한 예외 추적
-
-주요 기능:
-- **AppCore** — 병렬 실행(Thread/Process Pool), 콘솔 관리, 다국어 지원, CLI 입력 검증
-- **FileManager** — 원자적 파일 쓰기, JSON 읽기/쓰기, 안전한 파일 관리
-- **LogSys** — 구조화된 로깅 시스템
-- **Utils** — 경로 변환, 암호화, PBKDF2, 그리고:
-  - `GlobalVars` — 스레드 안전 전역 변수 + 공유 메모리 IPC
-  - `DecoratorUtils` — 런타임 측정, 함수-데코레이터 변환기
-- **Result** — 모든 작업의 표준화된 반환 객체
-- **ExceptionTracker** — 상세한 예외 추적 및 시스템 정보 수집
-
-```bash
-pip install tbot223-core
-```
-
-<details>
-<summary>📝 간단 예시</summary>
-
-```python
-from tbot223_core import AppCore, FileManager
-
-# 초기화
-app = AppCore.AppCore(is_logging_enabled=True)
-fm = FileManager.FileManager()
-
-# 안전한 JSON 쓰기
-fm.write_json("config.json", {"key": "value"})
-
-# 병렬 실행
-tasks = [(my_func, {"arg": i}) for i in range(10)]
-results = app.thread_pool_executor(tasks, workers=4)
-```
-
-</details>
-
----
-
-#### [playground](https://github.com/Tbot223/playground)
-아이디어를 테스트하고 혼돈과 창의력이 공존하는 개인의 모래상자. 🧪
-
-여기 있는 것들:
-##### PYTHON
-- **CountWord** — 단어를 세는 작은 유틸리티 (코딩 연습에서 시작, 이제 실제로 유용함)
-- **legacy/Core** — tbot223-core의 이전 버전들 (학습 역사)
-- **legacy/Cooooode** — 랜덤 실험: 숫자야구, 타이핑 효과, 기타 등등
-
-<details>
-<summary>📝 CountWord 예시</summary>
-
-```python
-from Scripts.CountWord import CountWord
-
-cw = CountWord(is_logging_enabled=False)
-result = cw.count_words_in_file("example.txt")
-print(f"단어 수: {result.data}")
-```
-
-</details>
-
----
-
-### 🎯 나에 대해
-
-| | |
-|---|---|
-| 🎵 **요즘 듣는 노래** | 어제보다 슬픈 오늘 - 우디 |
-| 🛠️ **개발 환경** | VSCode + Windows (많은 사람들이 쓰는 환경 선호!) |
-| ⏰ **코딩 시간** | 주로 새벽 🌙 |
-| 📚 **학습 방법** | 독학 + 다른 사람 코드 리뷰 |
-| 🎯 **중요하게 생각하는 것** | 안정성, 성능, 호환성 |
-| 🍿 **코딩할 때 필수** | 간식, 음악, 그리고 흥미 (이게 없으면 코딩 못함) |
-| 😴 **학교 생활** | 맨날 잠만 잠, 공부보다 잠이 더 좋아~(ㅎㅎ) |
-
-> 💬 Issue랑 PR 환영합니다!
-
-</details>
-
----
-
-### 📊 GitHub Stats
+<p align="right">
+  <b>English</b> · <a href="./README.ko.md">한국어</a>
+</p>
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Tbot223&bg_color=30,FF7F50,FF69B4&title_color=fff&text_color=fff&include_all_commits=true&show_icons=true&hide=issues&hide_border=true&count_private=true&line_height=30&border_radius=15" alt="Tbot223's github stats" width="400"/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Tbot223&layout=compact&bg_color=30,FF7F50,FF69B4&title_color=fff&hide=cs&text_color=fff&hide_border=true&card_width=400&border_radius=12" alt="Top Langs" width="400"/>
+  <a href="mailto:tbotxyz@gmail.com"><img alt="Email" src="https://img.shields.io/badge/Email-tbotxyz%40gmail.com-EA4335?style=flat-square&logo=gmail&logoColor=white"></a>
+  <a href="https://instagram.com/_hxun.s"><img alt="Instagram" src="https://img.shields.io/badge/Instagram-%40__hxun.s-E4405F?style=flat-square&logo=instagram&logoColor=white"></a>
+  <a href="https://linkedin.com/in/hyunseung-song-a196213b0"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat-square&logo=linkedin&logoColor=white"></a>
+  <a href="https://pypi.org/project/tbot223-core/"><img alt="PyPI" src="https://img.shields.io/pypi/v/tbot223-core?style=flat-square&logo=pypi&logoColor=white&label=tbot223-core"></a>
+</p>
+
+I'm a high schooler in Korea (12th grade) who really likes building things.
+Mostly Python, with a bit of Rust on the side. I'm not the fastest learner,
+but I try to make the things I build last — so I usually end up rewriting
+them three or four times until I'm actually happy with them. 🚀
+
+> If you want a quick reply, Instagram is the best place to find me.
+
+---
+
+## 🔭 What I'm into
+
+`System Design` · `Clean Architecture` · `Error Handling` · `i18n` · `AI`
+
+Nothing too flashy — I just enjoy thinking about how code stays readable
+and predictable as a project grows.
+
+---
+
+## 🚀 Things I've built
+
+### [`tbot223-core`](https://github.com/Tbot223/Core)
+
+A small utility library for Python (3.10 – 3.14), with **zero dependencies**.
+
+I got tired of writing the same boilerplate in every project, so I
+collected the patterns I kept reaching for and put them in one place.
+A lot of it is inspired by Rust's `Result` — I prefer returning errors
+explicitly over `try/except` everywhere.
+
+**What's inside**
+
+- **AppCore** — Thread / Process pool wrappers, console & CLI helpers, i18n
+- **FileManager** — Atomic writes, file locking, safe JSON I/O
+- **LogSys** — Structured, timestamped logging
+- **Utils** — `GlobalVars` (thread-safe globals + shared-memory IPC), `DecoratorUtils`, PBKDF2, path helpers
+- **Result / ExceptionTracker** — A standard return type and richer exception context
+
+```bash
+pip install tbot223-core
+```
+
+<details>
+<summary>📝 Quick example</summary>
+
+```python
+from tbot223_core import AppCore, FileManager
+
+app = AppCore.AppCore(is_logging_enabled=True)
+fm = FileManager.FileManager()
+
+fm.write_json("config.json", {"key": "value"})
+
+tasks = [(my_func, {"arg": i}) for i in range(10)]
+results = app.thread_pool_executor(tasks, workers=4)
+```
+
+</details>
+
+### [`playground`](https://github.com/Tbot223/playground)
+
+My sandbox. This is where ideas go before they're worth their own repo. 🧪🦀
+
+- **`PYTHON/CountWord`** — A tiny word counter that started as practice and somehow turned useful.
+- **`PYTHON/legacy`** — Older versions of `tbot223-core` and small experiments I keep around as learning history.
+- **`RUST/start`** — My first attempts at Rust. Slow going, but fun.
+
+### [`tbot223.github.io`](https://github.com/Tbot223/tbot223.github.io)
+
+My personal portfolio site. Plain HTML / CSS / JS with multilingual support.
+
+---
+
+## 🛠️ Tech & Tools
+
+<p>
+  <img alt="Python" src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white">
+  <img alt="Rust" src="https://img.shields.io/badge/Rust-000000?style=flat-square&logo=rust&logoColor=white">
+  <img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black">
+  <img alt="HTML5" src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white">
+  <img alt="CSS3" src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white">
+  <img alt="Git" src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white">
+  <img alt="VSCode" src="https://img.shields.io/badge/VSCode-007ACC?style=flat-square&logo=visualstudiocode&logoColor=white">
+  <img alt="Zed" src="https://img.shields.io/badge/Zed-084CCF?style=flat-square&logo=zedindustries&logoColor=white">
+</p>
+
+---
+
+## 🎯 A few things about me
+
+|  |  |
+|---|---|
+| 🛠️ **Editors** | VSCode and Zed, depending on my mood |
+| 💻 **OS** | Whatever's on the desk — Windows, Linux, or macOS |
+| ⏰ **Coding hours** | Almost always late at night 🌙 |
+| 📚 **How I learn** | Mostly self-taught, mostly by reading other people's code |
+| 🎯 **What I care about** | Stability, performance, and not breaking things |
+| 🍿 **Can't code without** | Snacks, music, and being curious about something |
+
+> 💬 Issues and PRs are always welcome. Don't be shy.
+
+---
+
+## 📊 GitHub Stats
+
+<p align="center">
+  <img alt="Tbot223's GitHub stats" src="https://github-readme-stats.vercel.app/api?username=Tbot223&show_icons=true&include_all_commits=true&count_private=true&hide=issues&hide_border=true&theme=tokyonight&border_radius=12" width="48%">
+  <img alt="Top languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Tbot223&layout=compact&hide=cs&hide_border=true&theme=tokyonight&border_radius=12" width="48%">
 </p>
