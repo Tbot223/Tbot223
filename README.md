@@ -12,10 +12,11 @@
   <a href="https://pypi.org/project/tbot223-core/"><img alt="PyPI" src="https://img.shields.io/pypi/v/tbot223-core?style=flat-square&logo=pypi&logoColor=white&label=tbot223-core"></a>
 </p>
 
-I'm a high schooler in Korea (12th grade) who really likes building things.
-Mostly Python, with a bit of Rust on the side. I'm not the fastest learner,
-but I try to make the things I build last — so I usually end up rewriting
-them three or four times until I'm actually happy with them. 🚀
+I'm a self-taught high school developer in Korea, mainly working with **Python and Go**. I enjoy building systems that remain predictable as they grow, from reusable Python libraries to real-time financial market simulations.
+
+I tend to start with a small idea, get curious about how the underlying system works, and end up designing something much bigger than I originally planned.
+
+[Portfolio](https://tbot223.github.io/) · [GitHub repositories](https://github.com/Tbot223?tab=repositories)
 
 > If you want a quick reply, Instagram is the best place to find me.
 
@@ -23,64 +24,58 @@ them three or four times until I'm actually happy with them. 🚀
 
 ## 🔭 What I'm into
 
-`System Design` · `Clean Architecture` · `Error Handling` · `i18n` · `AI`
+`System Design` · `Backend Engineering` · `Simulation` · `Concurrency` · `API Contracts` · `Performance`
 
-Nothing too flashy — I just enjoy thinking about how code stays readable
-and predictable as a project grows.
+I care about explicit failure paths, clear system boundaries, and measured optimization. I enjoy solving difficult problems, but I also try to keep complexity where it actually belongs.
 
----
+## 🚀 Selected projects
 
-## 🚀 Things I've built
+### Open-source libraries
 
-### [`tbot223-core`](https://github.com/Tbot223/Core)
+| Project | Description | Status |
+|---|---|---|
+| [`tbot223-core`](https://github.com/Tbot223/tbot223-core) | Zero-dependency Python toolkit for predictable operation results, file I/O, logging, parallel execution, and localization. | [Published on PyPI](https://pypi.org/project/tbot223-core/) |
+| [`tbot223-base`](https://github.com/Tbot223/tbot223-base) | A small Python package for explicit operation outcomes and public-safe error payloads across system boundaries. | Alpha rebuild; not recommended for production |
 
-A small utility library for Python (3.10 – 3.14), with **zero dependencies**.
+<details>
+<summary>More about the libraries</summary>
 
-I got tired of writing the same boilerplate in every project, so I
-collected the patterns I kept reaching for and put them in one place.
-A lot of it is inspired by Rust's `Result` — I prefer returning errors
-explicitly over `try/except` everywhere.
+**tbot223-core** supports Python 3.10–3.14. Its features include atomic file writes, file locking, structured logging, exception diagnostics, thread/process pool wrappers, and shared-memory IPC. The explicit `Result` contract is central to its design.
 
-**What's inside**
-
-- **AppCore** — Thread / Process pool wrappers, console & CLI helpers, i18n
-- **FileManager** — Atomic writes, file locking, safe JSON I/O
-- **LogSys** — Structured, timestamped logging
-- **Utils** — `GlobalVars` (thread-safe globals + shared-memory IPC), `DecoratorUtils`, PBKDF2, path helpers
-- **Result / ExceptionTracker** — A standard return type and richer exception context
+**tbot223-base** focuses on a smaller scope: typed success, failure, and cancellation results, with a clear separation between internal exception diagnostics and public-safe error data. Its current rebuild emphasizes contract accuracy and safety.
 
 ```bash
 pip install tbot223-core
 ```
 
-<details>
-<summary>📝 Quick example</summary>
-
-```python
-from tbot223_core import AppCore, FileManager
-
-app = AppCore.AppCore(is_logging_enabled=True)
-fm = FileManager.FileManager()
-
-fm.write_json("config.json", {"key": "value"})
-
-tasks = [(my_func, {"arg": i}) for i in range(10)]
-results = app.thread_pool_executor(tasks, workers=4)
-```
-
 </details>
 
-### [`playground`](https://github.com/Tbot223/playground)
+### Financial market simulation
 
-My sandbox. This is where ideas go before they're worth their own repo. 🧪🦀
+#### Stock Game · First generation
 
-- **`PYTHON/CountWord`** — A tiny word counter that started as practice and somehow turned useful.
-- **`PYTHON/legacy`** — Older versions of `tbot223-core` and small experiments I keep around as learning history.
-- **`RUST/start`** — My first attempts at Rust. Slow going, but fun.
+A previously deployed browser-based market simulation built with Python and Flask. It simulates stocks, commodities, and cryptocurrencies using rule-based market dynamics, macroeconomic events, sentiment, and sector behavior.
 
-### [`tbot223.github.io`](https://github.com/Tbot223/tbot223.github.io)
+The project also includes real-time data streaming and a bilingual player wiki with an interactive diagram viewer.
 
-My personal portfolio site. Plain HTML / CSS / JS with multilingual support.
+**Stack:** Python · Flask · JavaScript · SSE
+
+*Source repository is private.*
+
+#### Next-generation market simulator · In development
+
+A Go-based successor that extends the economic simulation with market microstructure and more direct player participation in price formation.
+
+The project focuses on order matching, liquidity, macroeconomic modeling, risk controls, and reproducible simulation behavior. Some features are still being developed or validated.
+
+**Stack:** Go · TypeScript · Next.js · PostgreSQL · Docker
+
+*Source repository is private; not publicly released.*
+
+### Other projects
+
+- [`playground`](https://github.com/Tbot223/playground) : Small experiments, learning history, and prototypes.
+- [`tbot223.github.io`](https://github.com/Tbot223/tbot223.github.io) : A bilingual personal portfolio built with plain HTML, CSS, and JavaScript.
 
 ---
 
@@ -88,29 +83,35 @@ My personal portfolio site. Plain HTML / CSS / JS with multilingual support.
 
 <p>
   <img alt="Python" src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white">
+  <img alt="Go" src="https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white">
   <img alt="Rust" src="https://img.shields.io/badge/Rust-000000?style=flat-square&logo=rust&logoColor=white">
+  <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white">
   <img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black">
   <img alt="HTML5" src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white">
   <img alt="CSS3" src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white">
+  <img alt="PostgreSQL" src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white">
+  <img alt="Docker" src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white">
   <img alt="Git" src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white">
+  <img alt="Linux" src="https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black">
   <img alt="VSCode" src="https://img.shields.io/badge/VSCode-007ACC?style=flat-square&logo=visualstudiocode&logoColor=white">
   <img alt="Zed" src="https://img.shields.io/badge/Zed-084CCF?style=flat-square&logo=zedindustries&logoColor=white">
 </p>
 
 ---
 
-## 🎯 A few things about me
+## 🎯 How I build
 
-|  |  |
+| | |
 |---|---|
-| 🛠️ **Editors** | VSCode and Zed, depending on my mood |
-| 💻 **OS** | Whatever's on the desk — Windows, Linux, or macOS |
-| ⏰ **Coding hours** | Almost always late at night 🌙 |
-| 📚 **How I learn** | Mostly self-taught, mostly by reading other people's code |
-| 🎯 **What I care about** | Stability, performance, and not breaking things |
-| 🍿 **Can't code without** | Snacks, music, and being curious about something |
+| **Stability first** | Design for failure paths and make operation outcomes explicit. |
+| **Clear contracts** | Keep interfaces predictable and verify the behavior they promise. |
+| **Measured performance** | Find bottlenecks through profiling and benchmarks rather than assumptions. |
+| **Maintainable systems** | Prefer clear boundaries and useful documentation over unnecessary abstraction. |
+| **Curiosity-driven learning** | Learn by building, testing assumptions, reading code, and iterating. |
 
-> 💬 Issues and PRs are always welcome. Don't be shy.
+Outside of my own projects, I enjoy discussing technical problems and providing design feedback to other developers.
+
+> Issues and PRs are welcome on my public projects.
 
 ---
 
